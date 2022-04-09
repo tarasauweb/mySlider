@@ -3,7 +3,7 @@
 	margin: 0;
 }
 .container{
-	width: 1170px;
+	width: 1140px;
 	margin: 0 auto;
 	height: 100%;
 }
@@ -28,16 +28,19 @@
 }
 .slides{
 	display: flex;
-	
+	transform: translateX(560px);
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
-	transform: translateX(530px);
+	transition: 0.5s;
+	
 }
 .slide{
 	
 	width: 500px;
 	padding: 20px;
-	margin-left: 20px;
+	margin-left: 0px;
+	margin-right: 45px;
+	box-sizing: border-box;
 	
 }
 .slider__img{
