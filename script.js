@@ -7,8 +7,6 @@ function slider (valueSlide = 1) {
 		let mainValue;
 		const widthSlide = divSlide.clientWidth;
 		const marginRightValue = parseInt(getComputedStyle(divSlide).marginRight.slice(0 , -2));
-		
-
 		function returnValue() {
 			const slidesBlockStyle = getComputedStyle(slidesBlock).transform ;
 			const arrValue = slidesBlockStyle.split(' ');
@@ -17,6 +15,7 @@ function slider (valueSlide = 1) {
 			return value
 		}
 		const startValueTransformSlides = returnValue()
+		console.log(startValueTransformSlides);
 		btnNext.addEventListener('click' , ()=>{
 			
 			if(-mainValue>=returnValue()){
@@ -32,7 +31,7 @@ function slider (valueSlide = 1) {
 
 		btnPrev.addEventListener('click' , ()=>{
 			if(startValueTransformSlides == returnValue()){
-				mainValue = startValueTransformSlides
+				mainValue = -startValueTransformSlides+30
 			}
 			else{
 				mainValue = returnValue() + widthSlide*valueSlide + marginRightValue*valueSlide
